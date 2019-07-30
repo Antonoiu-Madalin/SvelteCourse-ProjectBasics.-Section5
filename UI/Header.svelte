@@ -16,10 +16,11 @@
   h1 {
     color: white;
     margin: 0;
+    font-family: "Roboto Slab", serif;
   }
 </style>
 
 
 <header>
-	<h1>MeetNow</h1>
+	<h1>MeetUs</h1>
 </header>
