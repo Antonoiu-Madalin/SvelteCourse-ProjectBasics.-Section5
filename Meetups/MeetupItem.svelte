@@ -1,4 +1,6 @@
 <script>
+  import Button from "../UI/Button.svelte";
+
   export let title;
   export let subtitle;
   export let imageUrl;
@@ -37,13 +39,13 @@
     margin: 0.5rem 0;
     font-family: "Roboto Slab", sans-serif;
   }
-/*
-  h1.is-favorite {
-    background: #01a129;
-    color: white;
-    padding: 0 0.5rem;
-    border-radius: 5px;
-  }*/
+  /*
+        h1.is-favorite {
+          background: #01a129;
+          color: white;
+          padding: 0 0.5rem;
+          border-radius: 5px;
+        }*/
 
   h2 {
     font-size: 1rem;
@@ -58,6 +60,10 @@
 
   div {
     text-align: right;
+  }
+
+  .content{
+    height: 4rem;
   }
 </style>
 
@@ -78,9 +84,15 @@
 	</div>
 
 	<footer>
+  <!--
     <a href="mailto:{email}">Contact</a>
-		<button>Show details</button>
-		<button>Favorite</button>
+    <button>Show details</button>
+		<button>Favorite</button> Using our custom made button instead--> 
+    <Button href="mailto:{email}" caption="Contact" />
+    <Button mode="outline" type="button" caption="Favorite"/>
+    <Button type="button" caption="Show details"/> 
+   
+
 	</footer>
 
 </article>
