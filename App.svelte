@@ -32,22 +32,68 @@
       contactEmail: "swim@test.com"
     }
   ];
+
+  function addMeetup() {
+    const newMeetup = {
+      id: Math.random().toString(),
+      title: title,
+      subtitle: subtitle,
+      address: address,
+      contactEmail: email,
+      description: description,
+      imageUrl: imageUrl
+    };
+
+    meetups = [newMeetup, ...meetups];
+  }
 </script>
 
 
 <style>
   main {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 </style>
-
 
 <Header />
 
 <main>
+
+  <form on:submit|preventDefault={addMeetup}>
+
+    <div class="form-control">
+      <label for="title">Title</label>
+      <input for="text" id="title" bind:value={title} />
+    </div>
+
+    <div class="form-control">
+      <label for="suvtitle">Subtitle</label>
+      <input for="text" id="subtitle" bind:value={subtitle} />
+    </div>
+
+    <div class="form-control">
+      <label for="adress">Adress</label>
+      <input for="text" id="adress" bind:value={address}/>
+    </div>
+
+    <div class="form-control">
+      <label for="imageUrl">ImageUrl</label>
+      <input for="text" id="imageUrl" bind:value={imageUrl} />
+    </div>
+
+    <div class="form-control">
+      <label for="email">E-Mail</label>
+      <input for="email" id="email" bind:value={email} />
+    </div>
+
+    <div class="form-control">
+      <label for="description">Description</label>
+      <textarea rows="3" id="description" bind:value={description} />
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+
   <MeetupGrid {meetups} />
 </main>
 
-
-<!-- 1st meetups refers to component's, 2nd to App.svelte's
-<MeetupGrid meetups={meetups} /> -->

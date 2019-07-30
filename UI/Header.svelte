@@ -4,7 +4,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: 4rem;
+    height: 3rem;
     background: #cf0056;
     display: flex;
 
