@@ -46,12 +46,12 @@
     font-family: "Roboto Slab", sans-serif;
   }
 
-  /*h1.is-favorite {
-      background: #01a129;
-      color: white;
-      padding: 0 0.5rem;
-      border-radius: 5px;
-    }*/
+  h1.is-favorite {
+    background: #01a129;
+    color: white;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+  }
 
   h2 {
     font-size: 1rem;
@@ -77,11 +77,9 @@
   <header>
     <h1>
       {title}
-
       {#if isFav}
         <Badge>FAVORITE</Badge>
       {/if}
-
     </h1>
     <h2>{subtitle}</h2>
     <p>{address}</p>
@@ -100,7 +98,7 @@
       type="button"
       on:click={() => dispatch('togglefavorite', id)}>
       {isFav ? 'Unfavorite' : 'Favorite'}
-      </Button>
+    </Button>
     <Button type="button">Show Details</Button>
   </footer>
 </article>
