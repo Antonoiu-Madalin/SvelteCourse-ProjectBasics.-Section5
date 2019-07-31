@@ -5,7 +5,6 @@
   export let mode = null;
 </script>
 
-
 <style>
   button,
   a {
@@ -87,5 +86,5 @@
 {#if href}
   <a {href}>{caption}</a>
 {:else}
-  <button class={mode} type="{type}">{caption}</button>
+  <button class="{mode}" {type} on:click>{caption}</button>
 {/if}
